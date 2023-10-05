@@ -69,6 +69,6 @@ export class WeekDayComponent {
 
   addAppointment() {}
   onToggleDay() {
-    this.toggleDayEmitter.emit(this.appointmentData.active);
+    this.toggleDayEmitter.emit(this.appointmentData[this.i]);
   }
 }

@@ -44,10 +44,9 @@ export class ResourceDetailsComponent {
   ];
 
   toggleDay(event: any) {
-    const appointment = this.appointments.find((app) => app.day === event.day);
+    const appointment = this.appointments.find((app) => app.day == event.day);
     if (appointment) {
       appointment.active = !appointment.active;
     }
-    
   }
 }
