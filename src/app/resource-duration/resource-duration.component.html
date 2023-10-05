@@ -1,0 +1,143 @@
+<div class="card mt-4 mt-lg-0">
+  <div class="card-body p-md-4 px-md-5">
+    <div class="row">
+      <h6>
+        <label for="name" class="form-label">Resource Available for</label>
+      </h6>
+      <div class="input-group mb-3">
+        <input type="number" class="form-control border-end-0" />
+        <div ngbDropdown>
+          <button
+            type="button"
+            class="btn btn-outline-secondary input-btn"
+            id="durationType"
+            ngbDropdownToggle
+          >
+            {{ durationType }}
+          </button>
+          <div ngbDropdownMenu aria-labelledby="durationType">
+            <button
+              ngbDropdownItem
+              *ngFor="let choice of durationOptions"
+              (click)="durationType = choice"
+            >
+              {{ choice }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <h6>Resource Duration</h6>
+      <div class="col">
+        <div class="d-flex">
+          <div class="form-check me-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="defaultDuration"
+              name="duration"
+              (change)="isSpecificDuration = false"
+              checked
+            />
+            <label class="form-check-label" for="defaultDuration">
+              <i class="bi bi-app-indicator"></i> Default duration
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="specificDuration"
+              name="duration"
+              (change)="isSpecificDuration = true"
+            />
+            <label class="form-check-label" for="specificDuration">
+              <i class="bi bi-clock"></i> Specific duration
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-2 mt-lg-0">
+        <div class="custom-spinners" *ngIf="isSpecificDuration">
+          <input
+            type="number"
+            class="form-control text-center"
+            [value]="resourceDuration"
+          />
+          <button
+            class="btn btn-primary spinner left"
+            (click)="
+              resourceDuration > 1
+                ? (resourceDuration = resourceDuration - 1)
+                : null
+            "
+          >
+            -
+          </button>
+          <button
+            class="btn btn-primary spinner right"
+            (click)="resourceDuration = resourceDuration + 1"
+          >
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center mt-3">
+      <h6>Attendees</h6>
+      <div class="col">
+        <div class="d-flex">
+          <div class="form-check me-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="singleAttendee"
+              name="attendees"
+              (change)="isMultipleAttendees = false"
+            />
+            <label class="form-check-label" for="singleAttendee">
+              <i class="bi bi-person"></i> Single Attendee
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="multipleAttendees"
+              name="attendees"
+              checked
+              (change)="isMultipleAttendees = true"
+            />
+            <label class="form-check-label" for="multipleAttendees">
+              <i class="bi bi-people"></i> Multiple Attendees
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-2 mt-lg-0">
+        <div class="custom-spinners" *ngIf="isMultipleAttendees">
+          <input
+            type="number"
+            class="form-control text-center"
+            [value]="attendeesCount"
+          />
+          <button
+            class="btn btn-primary spinner left"
+            (click)="
+              attendeesCount > 1 ? (attendeesCount = attendeesCount - 1) : null
+            "
+          >
+            -
+          </button>
+          <button
+            class="btn btn-primary spinner right"
+            (click)="attendeesCount = attendeesCount + 1"
+          >
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

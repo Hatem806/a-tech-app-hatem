@@ -1,0 +1,32 @@
+.custom-spinners {
+    position: relative;
+    .spinner {
+        position: absolute;
+        top: 4px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px !important;
+        &.left {
+            left: 8px;
+        }
+        &.right {
+            right: 8px;
+        }
+    }
+
+    
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
