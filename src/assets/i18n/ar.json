@@ -1,0 +1,50 @@
+{
+  "tool-bar": {
+    "Add new resources": "إضافة موارد جديدة",
+    "Delete resource": "حذف المورد",
+    "Save Changes": "حفظ التغييرات",
+    "Activated": "مفعلة",
+    "Arabic": "العربية"
+  },
+  "resource-type": {
+    "Select resource type": "اختر نوع الموارد",
+    "Same Day": "حجز خلال اليوم",
+    "Duration (more than one day)": "حجز مدة ( أكثر من يوم )"
+  },
+  "resource-name": {
+    "Resource Name": "اسم الموارد"
+  },
+  "resource-duration": {
+    "Resource Available for": "المورد متاح إلى",
+    "Weeks": "إسبوع",
+    "Months": "شهر",
+    "Years": "سنة",
+    "Resource Duration": "وقت الخدمة",
+    "Default duration": "حجز اكثر من شخص لنفس الموعد",
+    "Specific duration": "الوقت ثابت",
+    "Attendees": "الحجز المتعدد",
+    "Single Attendee": "حجز واحد فقط",
+    "Multiple Attendees": "حجز اكثر من شخص لنفس الموعد"
+  },
+  "resource-details": {
+    "Select resource working hours": "حدد مواعيد العمل للمورد",
+    "Configure your week": "تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة / إزالة أوقات الراحة لإعداد ساعات العمل.",
+    "Default Configuration": "إعدادات تقليدية",
+    "Advanced Configuration": "إعدادات متقدمة",
+    "Filler content": "تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة / إزالة أوقات الراحة لإعداد ساعات العمل."
+  },
+  "week-day": {
+    "Sun": "الأحد",
+    "Mon": "الاثنين",
+    "Tues": "الثلاثاء",
+    "Wed": "الأربعاء",
+    "Thu": "الخميس",
+    "Fri": "الجمعة",
+    "Sat": "السبت",
+    "from": "وقت البدء",
+    "to": "وقت الإنتهاء",
+    "Save": "حفظ",
+    "Now": "Now",
+    "Close": "إغلاق"
+  }
+}

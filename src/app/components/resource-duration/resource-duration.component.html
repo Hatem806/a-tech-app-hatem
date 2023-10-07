@@ -2,7 +2,9 @@
   <div class="card-body p-md-4 px-md-5">
     <div class="row">
       <h6>
-        <label for="name" class="form-label">Resource Available for</label>
+        <label for="name" class="form-label">{{
+          "resource-duration." + "Resource Available for" | translate
+        }}</label>
       </h6>
       <div class="input-group mb-3">
         <input type="number" class="form-control border-end-0" />
@@ -13,7 +15,7 @@
             id="durationType"
             ngbDropdownToggle
           >
-            {{ durationType }}
+            {{ "resource-duration." + durationType | translate }}
           </button>
           <div ngbDropdownMenu aria-labelledby="durationType">
             <button
@@ -21,14 +23,14 @@
               *ngFor="let choice of durationOptions"
               (click)="durationType = choice"
             >
-              {{ choice }}
+              {{ "resource-duration." + choice | translate }}
             </button>
           </div>
         </div>
       </div>
     </div>
     <div class="row align-items-center">
-      <h6>Resource Duration</h6>
+      <h6>{{ "resource-duration." + "Resource Duration" | translate }}</h6>
       <div class="col">
         <div class="d-flex">
           <div class="form-check me-3">
@@ -41,7 +43,8 @@
               checked
             />
             <label class="form-check-label" for="defaultDuration">
-              <i class="bi bi-app-indicator"></i> Default duration
+              <i class="bi bi-app-indicator"></i>
+              {{ "resource-duration." + "Default duration" | translate }}
             </label>
           </div>
           <div class="form-check">
@@ -53,7 +56,8 @@
               (change)="isSpecificDuration = true"
             />
             <label class="form-check-label" for="specificDuration">
-              <i class="bi bi-clock"></i> Specific duration
+              <i class="bi bi-clock"></i>
+              {{ "resource-duration." + "Specific duration" | translate }}
             </label>
           </div>
         </div>
@@ -85,7 +89,7 @@
       </div>
     </div>
     <div class="row align-items-center mt-3">
-      <h6>Attendees</h6>
+      <h6>{{ "resource-duration." + "Attendees" | translate }}</h6>
       <div class="col">
         <div class="d-flex">
           <div class="form-check me-3">
@@ -97,7 +101,8 @@
               (change)="isMultipleAttendees = false"
             />
             <label class="form-check-label" for="singleAttendee">
-              <i class="bi bi-person"></i> Single Attendee
+              <i class="bi bi-person"></i>
+              {{ "resource-duration." + "Single Attendee" | translate }}
             </label>
           </div>
           <div class="form-check">
@@ -110,7 +115,8 @@
               (change)="isMultipleAttendees = true"
             />
             <label class="form-check-label" for="multipleAttendees">
-              <i class="bi bi-people"></i> Multiple Attendees
+              <i class="bi bi-people"></i>
+              {{ "resource-duration." + "Multiple Attendees" | translate }}
             </label>
           </div>
         </div>

@@ -1,6 +1,8 @@
 <div class="card mt-4">
-  <div class="card-body p-md-4 px-md-5 ">
-    <h6 class="me-3">Select resource type</h6>
+  <div class="card-body p-md-4 px-md-5">
+    <h6 class="me-3">
+      {{ "resource-type." + "Select resource type" | translate }}
+    </h6>
     <div class="d-flex flex-wrap">
       <div class="form-check me-3">
         <input
@@ -10,8 +12,8 @@
           name="type"
         />
         <label class="form-check-label" for="typeSameDay">
-          Same Day
-        </label>
+          {{ "resource-type." + "Same Day" | translate }}</label
+        >
       </div>
       <div class="form-check">
         <input
@@ -22,7 +24,7 @@
           checked
         />
         <label class="form-check-label" for="tpyeDuration">
-          Duration (more than one day)
+          {{ "resource-type." + "Duration (more than one day)" | translate }}
         </label>
       </div>
     </div>

@@ -1,0 +1,50 @@
+{
+  "tool-bar": {
+    "Add new resources": "Add new resources",
+    "Delete resource": "Delete resource",
+    "Save Changes": "Save Changes",
+    "Activated": "Activated",
+    "Arabic": "Arabic"
+  },
+  "resource-type": {
+    "Select resource type": "Select resource type",
+    "Same Day": "Same Day",
+    "Duration (more than one day)": "Duration (more than one day)"
+  },
+  "resource-name": {
+    "Resource Name": "Resource Name"
+  },
+  "resource-duration": {
+    "Resource Available for": "Resource Available for",
+    "Weeks": "Weeks",
+    "Months": "Months",
+    "Years": "Years",
+    "Resource Duration": "Resource Duration",
+    "Default duration": "Default duration",
+    "Specific duration": "Specific duration",
+    "Attendees": "Attendees",
+    "Single Attendee": "Single Attendee",
+    "Multiple Attendees": "Multiple Attendees"
+  },
+  "resource-details": {
+    "Select resource working hours": "Select resource working hours",
+    "Configure your week": "Configure your week settings here. Simply move the sliders and add/remove break times to set up work hours.",
+    "Default Configuration": "Default Configuration",
+    "Advanced Configuration": "Advanced Configuration",
+    "Filler content": "Your weekly picks are here. You just have to do the strips and there is no time required to set up the work."
+  },
+  "week-day": {
+    "Sun": "Sun",
+    "Mon": "Mon",
+    "Tues": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat",
+    "from": "from",
+    "to": "to",
+    "Save":"Save",
+    "Now":"Now",
+    "Close":"Close"
+  }
+}

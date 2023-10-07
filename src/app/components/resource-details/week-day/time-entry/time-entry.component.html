@@ -1,0 +1,117 @@
+<div class="row align-items-end">
+  <div class="col-12 col-md-6 col-lg-5">
+    <p>{{ "week-day." + "from" | translate }}</p>
+    <div class="input-group">
+      <input
+        type="text"
+        [value]="appointment.start.formatted"
+        class="form-control border-end-0"
+        readonly
+      />
+      <div ngbDropdown #timePickerStart="ngbDropdown">
+        <button
+          type="button"
+          class="btn btn-outline-secondary input-btn"
+          id="durationType"
+          ngbDropdownToggle
+        >
+          <i class="bi bi-clock"></i>
+        </button>
+        <div ngbDropdownMenu>
+          <ngb-timepicker
+            [(ngModel)]="appointment.start"
+            (ngModelChange)="formatTime(appointment.start, 'start')"
+            [minuteStep]="minuteStep"
+            [meridian]="meridian"
+          ></ngb-timepicker>
+          <div class="row justify-content-center g-0 mt-2 px-3">
+            <div class="col d-flex">
+              <button
+                class="btn btn-primary me-2"
+                (click)="$event.stopPropagation(); timePickerStart.close()"
+              >
+                {{ "week-day." + "Save" | translate }}
+              </button>
+              <button
+                class="btn btn-primary"
+                (click)="
+                  setNow('start');
+                  $event.stopPropagation();
+                  timePickerStart.close()
+                "
+              >
+                {{ "week-day." + "Now" | translate }}
+              </button>
+            </div>
+            <div class="col-4 text-end">
+              <button
+                class="btn btn-primary"
+                (click)="$event.stopPropagation(); timePickerStart.close()"
+              >
+                {{ "week-day." + "Close" | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-5">
+    <p>{{ "week-day." + "to" | translate }}</p>
+
+    <div class="input-group">
+      <input
+        type="text"
+        [value]="appointment.end.formatted"
+        class="form-control border-end-0"
+        readonly
+      />
+      <div ngbDropdown #timePickerEnd="ngbDropdown">
+        <button
+          type="button"
+          class="btn btn-outline-secondary input-btn"
+          id="durationType"
+          ngbDropdownToggle
+        >
+          <i class="bi bi-clock"></i>
+        </button>
+        <div ngbDropdownMenu>
+          <ngb-timepicker
+            [(ngModel)]="appointment.end"
+            (ngModelChange)="formatTime(appointment.end, 'end')"
+            [minuteStep]="minuteStep"
+            [meridian]="meridian"
+          ></ngb-timepicker>
+          <div class="row justify-content-center g-0 mt-2 px-3">
+            <div class="col d-flex">
+              <button
+                class="btn btn-primary me-2"
+                (click)="$event.stopPropagation(); timePickerEnd.close()"
+              >
+                {{ "week-day." + "Save" | translate }}
+              </button>
+              <button
+                class="btn btn-primary"
+                (click)="
+                  setNow('end'); $event.stopPropagation(); timePickerEnd.close()
+                "
+              >
+                {{ "week-day." + "Now" | translate }}
+              </button>
+            </div>
+            <div class="col-4 text-end">
+              <button
+                class="btn btn-primary"
+                (click)="$event.stopPropagation(); timePickerEnd.close()"
+              >
+                {{ "week-day." + "Close" | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -5,7 +5,10 @@
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
-
+// @import "bootstrap/dist/css/bootstrap.rtl.min.css";
+.body {
+  background-color: black !important;
+}
 // custom colors
 $body-bg: #dfe1e3;
 $raisin-black: #1c1c28;
@@ -55,12 +58,12 @@ ngb-timepicker .ngb-tp {
 }
 .form-control {
   background-color: transparent;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
 }
 
 .input-btn {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   border-left: 0;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
 }

@@ -2,31 +2,42 @@
   <div class="card-body">
     <div class="row justify-content-center">
       <div class="col-12 col-md-6 col-xl-7">
-        <h5>Select resource working hours</h5>
+        <h5>
+          {{
+            "resource-details." + "Select resource working hours" | translate
+          }}
+        </h5>
         <h6 class="small text-muted">
-          Configure your week settings here. Simply move the sliders and
-          add/remove break times to set up work hours.
+          {{ "resource-details." + "Configure your week" | translate }}
         </h6>
       </div>
       <div class="col-12 col-sm-8 col-md-6 col-xl-5">
-        <nav ngbNav #nav="ngbNav" class="nav-pills justify-content-between p-2">
+        <nav
+          ngbNav
+          #nav="ngbNav"
+          class="nav-pills justify-content-center justify-content-lg-between p-2"
+        >
           <ng-container ngbNavItem>
-            <button ngbNavLink>Default Configuration</button>
+            <button ngbNavLink>
+              {{ "resource-details." + "Default Configuration" | translate }}
+            </button>
             <ng-template ngbNavContent>
               <div *ngFor="let appointment of appointments; let i = index">
                 <app-week-day
-                  [appointmentData]="appointments"
-                  [i]="i"
+                  [day]="appointment"
                   (toggleDayEmitter)="toggleDay($event)"
+                  [weekdayIndex]="i"
                 ></app-week-day>
                 <hr *ngIf="i != appointments.length - 1" />
               </div>
             </ng-template>
           </ng-container>
           <ng-container ngbNavItem>
-            <a ngbNavLink>Advanced Configuration</a>
+            <a ngbNavLink>{{
+              "resource-details." + "Advanced Configuration" | translate
+            }}</a>
             <ng-template ngbNavContent>
-              <p>Slim content to save space in template.</p>
+              <p>{{ "resource-details." + "Filler content" | translate }}</p>
             </ng-template>
           </ng-container>
         </nav>

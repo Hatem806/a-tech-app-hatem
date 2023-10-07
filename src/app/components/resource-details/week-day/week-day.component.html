@@ -1,0 +1,47 @@
+<div class="row day-row">
+  <div class="col-12 col-lg-2">
+    <div class="form-check form-switch mb-2 pt-5">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+        id="activated"
+        [checked]="day.active"
+        (change)="onToggleDay()"
+      />
+      <label class="form-check-label pt-1 ms-1" for="activated">{{
+        "week-day." + day.name | translate
+      }}</label>
+    </div>
+  </div>
+  <div class="col">
+    <!-- THIS IS THE ROW THAT NEEDS TO BE A COMPONENT TO ALLOW ADDING MORE TIME ENTRIES ,(to implement addAppointment()) -->
+    <div *ngIf="day.active">
+      <div *ngFor="let appointment of day.appointments; let i = index">
+        <app-time-entry [appointment]="appointment">
+          <div
+            class="col-12 col-lg-2 mt-4 mt-lg-0 d-flex justify-content-end justify-content-lg-start"
+          >
+            <button
+              class="btn btn-outline-secondary me-3"
+              (click)="i == 0 ? addAppointment() : removeAppointment(i)"
+            >
+              <i
+                class="bi"
+                [ngClass]="i == 0 ? 'bi-plus-lg' : 'bi-dash-lg'"
+              ></i>
+            </button>
+
+            <button
+              class="btn btn-primary"
+              *ngIf="i == 0"
+              (click)="copyToClipboard()"
+            >
+              <i class="bi bi-copy"></i>
+            </button>
+          </div>
+        </app-time-entry>
+      </div>
+    </div>
+  </div>
+</div>
