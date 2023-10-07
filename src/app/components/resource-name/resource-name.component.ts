@@ -19,7 +19,6 @@ export class ResourceNameComponent {
       const reader = new FileReader();
 
       reader.onload = (e: any) => {
-        console.log(e.target.result);
         this.imagePath = e.target.result;
         localStorage.setItem('selectedImage', e.target.result);
       };
